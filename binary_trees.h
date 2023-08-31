@@ -36,6 +36,12 @@ void print_num(int n);
 void binary_tree_print(const binary_tree_t *tree);
 
 
+/* Definition of the levelorder_queue_t structure */
+typedef struct levelorder_queue_s
+{
+    binary_tree_t *node;
+    struct levelorder_queue_s *next;
+} levelorder_queue_t;
 /*task function */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
